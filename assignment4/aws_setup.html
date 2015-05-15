@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://class.coursera.org/datasci-002/wiki/awssetup -->
+<html xmlns:fb="http://ogp.me/ns/fb#" itemtype="http://schema.org" class="supports-svg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7"><meta name="fragment" content="!"><meta name="robots" content="NOODP"><meta charset="utf-8"><meta property="og:title" content="Coursera"><meta property="og:type" content="website"><meta property="og:image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta property="og:url" content="https://www.coursera.org/wiki/awssetup"><meta property="og:site_name" content="Coursera"><meta property="og:locale" content="en_US"><meta property="og:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta property="fb:admins" content="727836538,4807654"><meta property="fb:app_id" content="274998519252278"><meta name="twitter:site" content="Coursera"><meta name="twitter:app:name:iphone" content="Coursera"><meta name="twitter:app:name:ipad" content="Coursera"><meta name="twitter:app:name:googleplay" content="Coursera"><meta name="twitter:app:id:iphone" content="id736535961"><meta name="twitter:app:id:ipad" content="id736535961"><meta name="twitter:app:id:googleplay" content="org.coursera.android"><meta name="description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta name="apple-itunes-app" content="app-id=736535961"><title>Coursera</title>    <link href="./aws_setup_files/spark.main.css" rel="stylesheet" type="text/css">
+      <link href="./aws_setup_files/course.css" rel="stylesheet" type="text/css">
+    <link href="https://spark-public.s3.amazonaws.com/datasci/static/images/favicon.ico" rel="icon">
+<style type="text/css"></style><script type="text/javascript" async="" src="./aws_setup_files/ga.js"></script><script type="text/javascript" src="./aws_setup_files/MathJax.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/routes" src="./aws_setup_files/routes.js"></script><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Coursera"><meta name="twitter:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="twitter:image:src" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/204" src="./aws_setup_files/204.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/student-page" src="./aws_setup_files/student-page.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/student-page.html" src="./aws_setup_files/student-page.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/sparkSurveyQuestions/sparkSurveyQuestionsSessionModel" src="./aws_setup_files/sparkSurveyQuestionsSessionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/quickQuestions/sessionModel" src="./aws_setup_files/sessionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/SessionModel" src="./aws_setup_files/sessionModel(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/framework/QuestionCollection" src="./aws_setup_files/QuestionCollection.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/framework/QuestionModel" src="./aws_setup_files/QuestionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/lib/backbone.hascollections" src="./aws_setup_files/backbone.hascollections.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/underscore.extend" src="./aws_setup_files/underscore.extend.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/student-page" src="./aws_setup_files/student-page(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/header" src="./aws_setup_files/header.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/sidebar" src="./aws_setup_files/sidebar.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/readme" src="./aws_setup_files/readme.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/header.html" src="./aws_setup_files/header.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/analytics/models/LearnerStoriesCollection" src="./aws_setup_files/LearnerStoriesCollection.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark-survey/assessApi" src="./aws_setup_files/assessApi.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/sidebar.html" src="./aws_setup_files/sidebar.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/signature_track" src="./aws_setup_files/signature_track.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/header" src="./aws_setup_files/header(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/analytics/models/LearnerStoryModel" src="./aws_setup_files/LearnerStoryModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/signatureTrackLastChanceModal.html" src="./aws_setup_files/signatureTrackLastChanceModal.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/flexjoinLastChanceModal.html" src="./aws_setup_files/flexjoinLastChanceModal.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/util" src="./aws_setup_files/util.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/path" src="./aws_setup_files/path.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/sidebar" src="./aws_setup_files/sidebar(1).js"></script><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -5px 0 0 0; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head><body><div id="MathJax_Message" style="display: none;"></div><div id="fb-root"></div><div id="spark-help" class="hide"></div><a href="https://learner.coursera.help/hc/requests/new" target="_blank"><div style="z-index: 1" data-networkprioritysupportwidget="" role="button" class="helpwidget-tab hide">Premium Support</div></a><!-- - track IE8 and less browser for eventing purposes--><!--[if lte IE 8]><script>window._204 = window._204 || [];
+window._gaq = window._gaq || [];
+window._gaq.push(
+    ['_setAccount', 'UA-28377374-1'],
+    ['_setDomainName', window.location.hostname],
+    ['_setAllowLinker', true],
+    ['_trackPageview', window.location.pathname]);
+window._204.push(
+  ['client', 'home'],
+  {key:"pageview", value:window.location.pathname});</script><script src="https://dw0ugk4msqulk.cloudfront.net/f310c112bae429ab97a82234159003a31e360bf0/js/lib/204.js"></script><script src="https://ssl.google-analytics.com/ga.js"></script><![endif]--><div id="fb-root"></div><div id="origami" data-js="origami"><div><div><div class="coursera-page"><div role="menubar" class="coursera-header"><div class="hidden">This page features MathJax technology to render mathematical formulae.
+If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.</div><h1 class="hidden">Introduction to Data Science</h1><!-- UNTIL dashboard announcement expires 2014-12-01 (then delete this code)--><div role="banner" class="course-topbar container-fluid"><div class="row-fluid"><div class="span3"><a href="https://www.coursera.org/" data-if-linkable="add-referrer" class="course-topbar-logo"></a></div><div style="float:right;" class="course-topbar-nav-container span9"><h2 class="hidden">Top Navigation Bar</h2><ul class="course-topbar-nav-list"><li class="course-topbar-nav-list-item"><a href="https://www.coursera.org/courses" data-if-linkable="add-referrer">Courses</a></li><li tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="course-topbar-my" data-popup="#course-topbar-my" data-popup-bind-open="mouseenter" data-popup-close="data-popup-close" style="cursor:pointer;" data-popup-direction="se" class="course-topbar-nav-list-item"><a data-user-id="6792717">Aneesh Makala<i class="icon-caret-down"></i></a></li></ul></div></div><div id="course-topbar-aboutus" class="course-topbar-sublist"><a href="https://www.coursera.org//about/" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">About Us</a><a href="https://www.coursera.org//about/careers" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">Careers</a><a href="https://www.coursera.org//about/people" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">People</a><a href="https://www.coursera.org//about/contact" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">Contact Us</a></div><div id="course-topbar-my" class="course-topbar-sublist"><a data-popup-close="data-popup-close" href="https://www.coursera.org/" target="_new" class="course-topbar-sublist-item">My Courses</a><a data-popup-close="data-popup-close" href="https://www.coursera.org/account/profile" target="_new" class="course-topbar-sublist-item">Profile</a><a data-popup-close="data-popup-close" href="https://www.coursera.org/account/accomplishments" target="_new" class="course-topbar-sublist-item">Course Records</a><a href="https://www.coursera.org/account/settings" target="_new" class="course-topbar-sublist-item">Settings</a><a href="https://class.coursera.org/datasci-002/class/preferences" class="course-topbar-sublist-item">Course Preferences</a><a href="https://class.coursera.org/datasci-002/auth/logout" class="course-topbar-sublist-item">Sign Out</a></div></div><div class="course-topbanner-wrapper"><div class="course-topbanner"><div class="course-topbanner-university-logo"><a href="https://www.coursera.org/uw" target="_blank" data-if-linkable="add-referrer" title="https://www.coursera.org/uw" class="coursera-university-color"><img src="./aws_setup_files/university_logo" alt="uw"></a></div><h1 class="course-topbanner-header"><a href="https://class.coursera.org/datasci-002/" data-if-linkable="modal-lock" class="course-topbanner-name coursera-university-color">Introduction to Data Science</a><br><span style="" class="course-topbanner-instructor">by Bill Howe</span></h1></div></div></div><div style="position:relative;" class="container-fluid"><div class="row-fluid"><div id="course-page-sidebar" role="navigation"><div role="menubar" class="coursera-sidebar"><div id="course-page-sidebar" role="navigation"><div class="course-navbar-container"><a href="https://class.coursera.org/datasci-002" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_index"><img src="./aws_setup_files/logo" style="width: 205px;height: 116px;margin: -15px 0px 8px 1px; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);" alt="Course Home Page"></a><div data-coursera-course-search-nav-widget="data-coursera-course-search-nav-widget" class="input-append course-search-nav-box"><form method="get" action="https://class.coursera.org/datasci-002/class/search" data-js-search-form="data-js-search-form" class="form-inline minimized-search"><label for="course-search-nav-input" class="accessible-text-for-reader">Search this course</label><input id="course-search-nav-input" type="text" name="q" data-js-search-input="data-js-search-input">&nbsp;<button type="submit" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="search" class="btn icon-search"><span class="accessible-text-for-reader">Search</span></button></form></div><h2 class="hidden">Side Navigation Bar</h2><ul class="course-navbar-list"><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/class/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Home" class="coursera-university-color"><span>Home </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/lecture/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Video_Lectures" class="coursera-university-color"><span>Video Lectures </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/forum/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Discussion_Forums" class="coursera-university-color"><span>Discussion Forums </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/assignment/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Programming_Assignments" class="coursera-university-color"><span>Programming Assignments </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/quiz/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Quizzes" class="coursera-university-color"><span>Quizzes </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/human_grading/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Peer_Assessments" class="coursera-university-color"><span>Peer Assessments </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/wiki/OptionalRealWorldProject" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Optional_Real-World_Project" class="coursera-university-color"><span>Optional Real-World Project </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/wiki/syllabus" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Syllabus" class="coursera-university-color"><span>Syllabus </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/wiki/courselogistics" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Course_Logistics" class="coursera-university-color"><span>Course Logistics </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/wiki/ClassVirtualMachine" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Class_Virtual_Machine" class="coursera-university-color"><span>Class Virtual Machine </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/wiki/GithubInstructions" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Github_Instructions" class="coursera-university-color"><span>Github Instructions </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/wiki/PythonResources" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Python_Resources" class="coursera-university-color"><span>Python Resources </span><span></span></a></li><li class="course-navbar-item active"><a href="./aws_setup_files/aws_setup.html" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_AWS_Setup" class="coursera-university-color"><span>AWS Setup </span><span></span><span class="course-navbar-selected-marker">(selected)</span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/quiz/index?quiz_type=survey" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Surveys" class="coursera-university-color"><span>Surveys </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/datasci-002/wiki/aboutus" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_About_Us" class="coursera-university-color"><span>About Us </span><span></span></a></li></ul><ul style="list-style-type:none;margin-left: 10px;"><li><a href="https://learner.coursera.help/" target="_blank" title="Open help articles in new window" class="coursera-university-color"><i class="icon-question-sign"></i>Help Center</a></li></ul><ul style="list-style-type:none;margin-left: 10px;"><li><a href="https://class.coursera.org/datasci-002/forum/list?forum_id=10000&url=https%3A%2F%2Fclass.coursera.org%2Fdatasci-002%2Fwiki%2Fawssetup" class="coursera-university-color"><i class="icon-comments"></i>Course Materials Errors</a></li><li><a href="https://class.coursera.org/datasci-002/forum/list?forum_id=10001&url=https%3A%2F%2Fclass.coursera.org%2Fdatasci-002%2Fwiki%2Fawssetup" class="coursera-university-color"><i class="icon-comments"></i>Technical Issues</a></li></ul></div></div></div></div><div id="course-page-content" role="main"><div id="spark" class="hide" style="display: block;">
+<h2 class="course-page-header">
+    AWS Setup    <a class="coursera-reporter-link" title="Click here if you&#39;re experiencing technical problems or found errors in the course materials." target="_blank" href="https://class.coursera.org/datasci-002/help/pages?url=https%3A%2F%2Fclass.coursera.org%2Fdatasci-002%2Fwiki%2Fawssetup">
+      Help Center
+    </a>
+    <a data-coursera-admin-helpwidget-link="" rel="help" href="https://class.coursera.org/mooc/help/pages/setup" title="Course Page Setup" style="display:none;">Learn more.</a>
+</h2>
+
+
+<h2 style="font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; color: rgb(85, 85, 85);">Setting up your AWS account</h2>
+
+
+<p>Amazon will ask you for your credit card information during the setup process. You will be charged for using their services. You should not have to spend&nbsp;more than 5-10 dollars.</p>
+
+<ol>
+<li>Go to&nbsp;<a href="http://aws.amazon.com/" title="Link: http://aws.amazon.com/">http://aws.amazon.com/</a>&nbsp;and sign up:&nbsp;<br><ol style="list-style-type: lower-alpha;">
+<li>You may sign in using your existing Amazon account or you can create a new account by selecting "Create a free account" using the button at the right, then selecting "I am a new user."</li>
+<li>Enter your contact information and confirm your acceptance of the AWS Customer Agreement.</li>
+<li>Once you have created an Amazon Web Services Account, you may need to accept a telephone call to verify your identity. Some students have used&nbsp;<a href="https://www.google.com/voice" title="Link: https://www.google.com/voice">Google Voice</a>&nbsp;successfully if you don't have or don't want to give a mobile number.</li>
+
+</ol>
+</li>
+
+<li>Once you have an account, go to&nbsp;<a href="http://aws.amazon.com/" title="Link: http://aws.amazon.com/">http://aws.amazon.com/</a>&nbsp;and sign in. You will work primarily from the Amazon Management Console.</li>
+
+<li>Create Security Credentials. &nbsp;Go to the <a href="https://console.aws.amazon.com/iam/home?#security_credential" target="_blank" title="Link: https://console.aws.amazon.com/iam/home?#security_credential">AWS security credentials page</a>&nbsp;. &nbsp;If you are asked about&nbsp;IAM users, close the message.&nbsp;&nbsp;Expand "Access Keys" and click "Create New Access Key." &nbsp;You will see a message <strong style="color: rgb(0, 142, 0); line-height: 20px;">Your access key (access key ID and secret access key) has been created successfully.</strong>&nbsp;Click "Download Key File" and make note of where you saved the file.&nbsp;</li>
+
+</ol>
+<h2 id="Setting_up_an_EC2_key_pair" style="font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; color: rgb(85, 85, 85);">Setting up an EC2 key pair</h2>
+
+<p>To connect to the Amazon EC2 instances you will be creating, you need to create&nbsp;an SSH key pair.&nbsp;</p>
+
+<ol style="font-size: 14.44444465637207px; font-weight: normal; line-height: 21px;">
+<li>After setting up your account, follow&nbsp;<a href="http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/generating-a-keypair.html" target="_blank" title="Link: http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/generating-a-keypair.html">Amazon's instructions</a>&nbsp;to create a key pair. Follow the instructions in section "Creating Your Key Pair Using Amazon EC2." &nbsp;(We have reports that&nbsp;Internet Explorer could make it impossible&nbsp;to download the .pem private key file; you may want to&nbsp;use a different browser.)</li>
+<li>Download and save the .pem private key file to disk. We will reference the .pem file as&nbsp;<code>&lt;/path/to/saved/keypair/file.pem&gt;</code>&nbsp;in the following instructions.</li>
+<li>Make sure only you can access the .pem file. If you do not change the permissions, you will get an error message at a later step. &nbsp;Change the permissions using this command:<pre>$ chmod 600 &lt;/path/to/saved/keypair/file.pem&gt;</pre>
+</li>
+<li>Note: This step will NOT work on Windows 7 with cygwin. Windows 7 does not allow file permissions to be changed through this mechanism, and they must be changed for ssh to work. So if you must use Windows, you should use&nbsp;<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>&nbsp;as your ssh client. In this case, you will further have to transform this key file into PuTTY format. For more information go to&nbsp;<a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html" title="Link: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html">http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html</a>&nbsp;and look under "Private Key Format."</li>
+
+</ol>
+<h2 id="Running_jobs_on_AWS" style="font-family: &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; color: rgb(85, 85, 85);">Starting an AWS Cluster and running Pig Interactively</h2>
+
+<p>To run a Pig job on AWS, you need to start up an AWS cluster using the&nbsp;<a href="https://console.aws.amazon.com/elasticmapreduce/home" target="_blank" title="Link: https://console.aws.amazon.com/elasticmapreduce/home">AWS Management Console</a>&nbsp;and connect to the Hadoop <em>master node.</em> Follow the steps below. You may also find&nbsp;<a href="http://aws.amazon.com/articles/2729" target="_blank" title="Link: http://aws.amazon.com/articles/2729">Amazon's interactive Pig tutorial</a>&nbsp;useful, but note that the screenshots are slightly out of date.</p>
+<span style="font-size: 14.44444465637207px; font-weight: normal; line-height: 21px;">To set up and connect to a pig cluster, perform the following steps:</span><ul style="font-size: 14.44444465637207px; font-weight: normal; line-height: 21px;"></ul>
+<ol>
+<li>Go to&nbsp;<a href="http://console.aws.amazon.com/elasticmapreduce/home" title="Link: http://console.aws.amazon.com/elasticmapreduce/home">http://console.aws.amazon.com/elasticmapreduce/home</a>&nbsp;signing in if necessary.</li>
+<li>Click the "Create Cluster".</li>
+
+<li>Enter "Data Science Assignment Cluster" or anything you wish as the Cluster Name.</li>
+
+<li>Uncheck the Logging box so that it is disabled.</li>
+<li>Scroll down to Software Configuration and select <strong>AMI Version 2.4.2</strong> &nbsp;(We will be using Hadoop 1.x for compatibility with the version of&nbsp;Pig)</li>
+
+<li>Scroll down to "Security and Access" and select the Key Pair you created above.</li>
+<li>Scroll to the bottom and select "Create Cluster"</li>
+
+<li>On the next page, information about your cluster will be displayed. &nbsp;It will begin in the "Starting" state and may take several minutes&nbsp;to startup completely.</li>
+
+<li>Once the cluster has started, you will see a&nbsp;"Master Public DNS" name of the form&nbsp;<span style="color: rgb(68, 68, 68); font-family: &#39;Helvetica Neue&#39;, Roboto, Arial, &#39;Droid Sans&#39;, sans-serif; line-height: 20.22222328186035px;">ec2-XX-XXX-X-XXX.compute-1.amazonaws.com. Make a note of this; we will refer to it as</span>&nbsp;<span style="color: red; font-weight: bold;">&lt;master.public-dns-name.amazonaws.com&gt;</span>.<br>
+</li>
+
+<li>Now you are ready to connect to your cluster and run Pig jobs. From a terminal, use the following command:&nbsp;<br><br><span class="programlisting"><code>$ ssh -o "ServerAliveInterval 10" -i &lt;/path/to/saved/keypair/file.pem&gt; hadoop@<span style="color: red; font-weight: bold;">&lt;master.public-dns-name.amazonaws.com&gt;</span>&nbsp;</code></span>
+</li>
+
+<li>Once you connect successfully, just type &nbsp;<br><br><span class="programlisting"><code>$ pig</code></span>
+</li>
+<li>Now you should have a pig prompt&nbsp;&nbsp;<br><br><span class="programlisting"><code>grunt&gt;&nbsp;</code></span>
+</li>
+<li>
+<span style="color: inherit; font-family: inherit;">This is the interactive mode where you type in pig queries.&nbsp;In this quiz we will use pig only interactively. (The alternative is to have pig read the program from a file.) &nbsp;Here you will cut and paste&nbsp;</span><code style="color: inherit;">example.pig</code><span style="color: inherit; font-family: inherit;">. You are now ready to return to the quiz.&nbsp;</span>
+</li>
+</ol>
+<ul style="font-size: 14.44444465637207px; font-weight: normal; line-height: 21px;">
+<br>Other useful information:<ul>
+<li>For the first job you run, Hadoop will create the output directory for you automatically. But Hadoop refuses to overwrite existing results. So you will need to move your prior results to a different directory before re-running your script, specify a different output directory in the script, or delete the prior results altogether.&nbsp;<br>To see how to perform these tasks and more, see&nbsp;<a href="https://class.coursera.org/datasci-002/admin/coursepages/ilxbxsQ3EeK0mxIxPSh0YA#managingresults" title="Link: #managingresults">"Managing the results of your Pig queries"</a>&nbsp;below.</li>
+<li>To exit pig, type&nbsp;<code>quit</code>&nbsp;at the&nbsp;<code>grunt&gt;</code>&nbsp;promt. To terminate the ssh session, type&nbsp;<code>exit</code>&nbsp;at the unix prompt: after that you must terminate the AWS cluster (see next).</li>
+<li>To kill a pig job type CTRL/C while pig is running.This kills pig only: after that you need to kill the hadoop job. We show you how to do this below.&nbsp;<br>
+</li>
+
+</ul>
+</ul>
+<h2 id="Terminating_a_running_cluster">Monitoring Hadoop jobs</h2>
+
+<ul><p>By far the easiest way to do this from linux or a mac&nbsp;is to use ssh tunneling.</p></ul>
+<ol>
+<li>On your local machine, run this command</li>
+<pre>ssh -L 9100:localhost:9100 -L 9101:localhost:9101  -i ~/.ssh/<span style="white-space: normal;">&lt;/path/to/saved/keypair/file.pem&gt;</span> hadoop@<span style="color: rgb(255, 0, 0); font-weight: bold; font-family: inherit;">&lt;master.public-dns-name.amazonaws.com&gt;</span></pre>
+
+<li>Open your browser to&nbsp;<a href="http://localhost:9101/" title="Link: http://localhost:9100">http://localhost:9101</a>
+</li>
+</ol>
+<br>From there, you can monitor your jobs' progress using the UI.<p></p>
+<p>Another way to do this is to&nbsp;use&nbsp;<a href="http://lynx.isc.org/" target="_new">lynx</a>, a text-based web browser.</p>
+<ol>
+<li>Using LYNX. Very easy, you don't need to download anything. Open a separate&nbsp;<code>ssh</code>&nbsp;connection to the AWS master node and type:&nbsp;<br><br><code>% lynx http://localhost:9101/&nbsp;</code><br><br>Lynx is a text browswer. Navigate as follows:&nbsp;<code>up/down arrows&nbsp;</code>= move through the links (current link is highlighted);&nbsp;<code>enter</code>&nbsp;= follows a link;&nbsp;<code>left arrow</code>&nbsp;= return to previous page.&nbsp;<br><br>Examine the webpage carefully while your pig program is running. You should find information about the map tasks, the reduce tasks, you should be able to drill down into each map task (for example to monitor its progress); you should be able to look at the log files of the map tasks (if there are runtime errors, you will see them only in these log files).&nbsp;<br><br>
+</li>
+
+</ol>
+<h2>Killing a Hadoop Job</h2>
+
+<ul>
+<p>Later, in the assignment, we will show you how to launch MapReduce jobs through Pig. You will basically write Pig Latin scripts that will be translated into MapReduce jobs (see lecture notes). Some of these jobs can take a long time to run. If you decide that you need to interrupt a job before it completes, here is the way to do it:</p>
+<p>If you want to kill pig, you first type CTRL/C, which kills pig only. Next, kill the hadoop job, as follows. From the job tracker interface find the hadoop&nbsp;<code>job_id</code>, then type:</p>
+<blockquote><p><code>% hadoop job -kill job_id</code></p></blockquote>
+<p>You do not need to kill any jobs at this point.</p>
+<p>However, you can now exit pig (just type "quit") and exit your ssh session. You can also kill the SSH SOCKS tunnel to the master node.</p>
+</ul>
+<h2>Terminating an AWS cluster</h2>
+
+<ul>
+<p>When you are done running Pig scripts, make sure to&nbsp;<strong>ALSO</strong>&nbsp;terminate your job flow. This is a step that you need to do&nbsp;<strong>in addition to&nbsp;</strong>stopping pig and Hadoop (if necessary) above.</p>
+
+<p>This step shuts down your AWS cluster:</p>
+</ul>
+<ol>
+<li>Go to the&nbsp;<a href="https://console.aws.amazon.com/elasticmapreduce/home" target="_blank" title="Link: https://console.aws.amazon.com/elasticmapreduce/home">Management Console.</a>
+</li>
+<li>Select the job in the list.</li>
+<li>Click the Terminate button at the top.</li>
+<li>You may need to turn Termination protection off before you are allowed to terminate -- you can do so from within the dialog.&nbsp;</li>
+<li>Wait for a while (may take minutes) and recheck until the job state becomes TERMINATED.</li>
+
+</ol>
+<p><strong>Pay attention to this step</strong>. If you fail to terminate your job and only close the browser, or log off AWS, your AWS will continue to run, and AWS will continue to charge you: for hours, days, weeks, and when your credit is exhausted, it chages your creditcard. Make sure you don't leave the console until you have confirmation that the job is terminated.</p>
+<p>You can now shut down your cluster.</p>
+
+
+
+
+<h2>Checking your Balance</h2>
+
+<ul>
+<p>Please check your balance regularly!!!</p>
+
+</ul>
+<ol>
+<li>Go to the&nbsp;<a href="https://console.aws.amazon.com/elasticmapreduce/home" target="_blank">Management Console.</a>
+</li>
+
+<li>Click on your name in the top right corner and select "Account Activity".</li>
+<li>Now click on "detail" to see any charges &lt; $1.</li>
+
+</ol>
+<p>To avoid unnecessary charges, terminate your job flows when you are not using them.</p>
+<p><strong>USEFUL</strong>: AWS customers can now use&nbsp;<strong class="important">billing alerts</strong>&nbsp;to help monitor the charges on their AWS bill. You can get started today by visiting your&nbsp;<a href="https://aws-portal.amazon.com/gp/aws/developer/account/index.html" target="_blank">Account Activity page</a>&nbsp;to enable monitoring of your charges. Then, you can set up a billing alert by simply specifying a bill threshold and an e-mail address to be notified as soon as your estimated charges reach the threshold.&nbsp;</p>
+
+
+
+
+
+<h2>Managing the results of your Pig queries</h2>
+
+<ul>
+<a id="managingresults"></a><p>For the next step, you need to restart a new cluster as follows. Hopefully, it should now go very quickly:</p>
+
+<ul>
+<li>Start a new cluster with one instance.</li>
+
+<li>Start a new interactive Pig session (through grunt)</li>
+
+<li>Connect to the monitoring interface using an ssh tunnel or via lynx</li>
+
+</ul>
+<p>We will now get into more details about running Pig scripts.</p>
+
+<p>Your pig program stores the results in several files in a directory. You have two options: (1) store these files in the Hadoop File System, or (2) store these files in S3. In either case you will need to copy them to your local machine.</p>
+</ul>
+<h3>1. Storing Files in the Hadoop File System</h3>
+
+<ul><p>This is done through the following pig command (used in&nbsp;<code>example.pig</code>):</p></ul>
+<pre> store count_by_object_ordered into '/user/hadoop/example-results' using PigStorage();</pre>
+
+<p>Before you run the pig query, you need to (A) create the /user/hadoop directory. After you run the query you need to (B) copy this directory to the local directory of the AWS master node, then (C) copy this directory from the AWS master node to your local machine.</p>
+
+<h4>1.A. Create the "/user/hadoop" Directory in the Hadoop Filesystem</h4>
+
+<ul>
+<p>You will need to do this for each new job flow that you create.</p>
+
+<p>To create a&nbsp;<code>/user/hadoop</code>&nbsp;directory on the AWS cluster's HDFS file system run this from within grunt</p>
+</ul>
+<pre>hadoop fs<span style="color: inherit; font-family: inherit;"> -mkdir /user/hadoop</span></pre>Check that the directory was created by listing it with this command:<pre>hadoop fs<span style="color: inherit; font-family: inherit;"> </span><span style="color: inherit; font-family: inherit;">-ls /user/hadoop</span></pre>
+<p>You may see some output from either command, but you should not see any errors.</p>
+<p>You can also do this directly from grunt with the following command.</p>
+<pre>grunt&gt; fs -mkdir /user/hadoop </pre>
+
+<p>Now you are ready to run your first sample program. Take a look at the starter code that we provided in the course materials repo. Copy and paste the content of&nbsp;<code>example.pig.</code></p>
+
+<p><strong>Note</strong>: The program may appear to hang with a 0% completion time... go check the job tracker. Scroll down. You should see a MapReduce job running with some non-zero progress.</p>
+
+<p><strong>Note 2</strong>: Once the first MapReduce job gets to 100%... if your grunt terminal still appears to be suspended... go back to the job tracker and make sure that&nbsp;<strong>the reduce phase is also 100% complete</strong>. It can take some time for the reducers to start making any progress.</p>
+<p><strong>Note 3</strong>: The example generates more than 1 MapReduce job... so be patient.</p>
+
+
+
+<h4>1.B. Copying files from the Hadoop Filesystem</h4>
+
+<ul><p>The result of a pig script is stored in the hadoop directory specified by the&nbsp;<code>store</code>&nbsp;command. That is, for&nbsp;<code>example.pig</code>, the output will be stored at&nbsp;<code>/user/hadoop/example-results</code>, as specified in the script. HDFS is separate from the master node's file system, so before you can copy this to your local machine, you must copy the directory from HDFS to the master node's Linux file system:</p></ul>
+<pre>% hadoop fs -copyToLocal /user/hadoop/example-results example-results</pre>
+<p>This will create a directory&nbsp;<code>example-results</code>&nbsp;with&nbsp;<code>part-*</code>&nbsp;files in it, which you can copy to your local machine with&nbsp;<code>scp</code>. You can then concatenate all the&nbsp;<code>part-*</code>&nbsp;files to get a single results file, perhaps sorting the results if you like.</p>
+<p>An easier option may be to use</p>
+<pre>% hadoop fs -getmerge  /user/hadoop/example-results example-results</pre>
+<p>This command takes a source directory and a destination file as input and concatenates files in src into the destination local file.</p>
+<p><br>Use&nbsp;<code>hadoop dfs -help</code>&nbsp;or see the&nbsp;<a href="http://hadoop.apache.org/docs/stable/file_system_shell.html"><code>hadoop dfs</code>&nbsp;guide</a>&nbsp;to learn how to manipulate HDFS. (Note that&nbsp;<code>hadoop fs</code>&nbsp;is the same as&nbsp;<code>hadoop dfs</code>.)&nbsp;<br></p>
+
+
+
+<h4>1.C. Copying files to or from the AWS master node</h4>
+
+<ul><ul>
+<li>To copy one file from the master node back to your computer, run this command&nbsp;<em>on the local computer:</em>&nbsp;<br><br><pre>$ scp -o "ServerAliveInterval 10" -i &lt;/path/to/saved/keypair/file.pem&gt; hadoop@<span style="color: red; font-weight: bold;">&lt;master.public-dns-name.amazonaws.com&gt;</span>:&lt;file_path&gt; .
+    </pre>where&nbsp;<code>&lt;file_path&gt;</code>&nbsp;can be absolute or relative to the AWS master node's home folder. The file should be copied onto your current directory ('.') on your local computer.&nbsp;<br><br>
+</li>
+
+<li>Better: copy an entire directory, recursively. Suppose your files are in the directory&nbsp;<code>example-results</code>. They type the following&nbsp;<em>on your loal computer</em>:<pre>$ scp -o "ServerAliveInterval 10" -i &lt;/path/to/saved/keypair/file.pem&gt; -r hadoop@<span style="color: red; font-weight: bold;">&lt;master.public-dns-name.amazonaws.com&gt;</span>:example-results .</pre>
+</li>
+<li>As an alternative, you may run the scp command on the AWS master node, and connect to your local machine. For that, you need to know your local machine's domain name, or IP address, and your local machine needs to accept ssh connections.</li>
+
+</ul></ul>
+<h3>2. Storing Files in S3</h3>
+
+<ul>
+<p>To use this approach, go to your AWS Management Console, click on Create Bucket, and create a new bucket (=directory). Give it a name that may be a public name. Do not use any special chatacters, including underscore. Let's say you call it<code>&nbsp;superman</code>. Click on Actions, Properties, Permissions. Make sure you have all the permissions.</p>
+<p>Modify the store command of&nbsp;<code>example.pig</code>&nbsp;to:</p>
+</ul>
+<pre> store count_by_object_ordered into 's3n://superman/example-results';</pre>
+<p>Run your pig program. When it terminates, then in your S3 console you should see the new directory&nbsp;<code>example-results</code>. Click on individual files to download. The number of files depends on the number of reduce tasks, and may vary from one to a few dozens. The only disadvantage of using S3 is that you have to click on each file separately to download.</p>
+<p>Note that S3 is permanent storage, and you are charged for it. You can safely store all your query answers for several weeks without exceeding your credit; at some point in the future remember to delete them.</p>
+<p><br></p>
+<p>&nbsp;</p>
+
+
+
+<ul></ul>
+<hr>
+<div>
+    <div style="float:left">
+    	    	    </div>
+    <div style="float:right;text-align:right;font-size:10px;">
+    	Created Thu 23 May 2013 11:02 PM PDT<br>
+    	Last Modified Wed  6 Aug 2014  2:10 AM PDT    </div>
+</div>
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+  config: ["MMLorHTML.js"],
+  
+  styleSheets: [],
+  styles: {},
+
+  jax: ["input/TeX"],
+  
+  extensions: ["tex2jax.js"],
+
+  preJax: null,
+  postJax: null,
+
+  preRemoveClass: "MathJax_Preview",
+
+  showProcessingMessages: true,
+
+  messageStyle: "none",
+  
+  displayAlign: "center",
+  displayIndent: "0em",
+  
+  delayStartupUntil: "none",
+
+  skipStartupTypeset: false,
+  
+  elements: [],
+  
+  tex2jax: {
+	    inlineMath: [
+	                 ['$$','$$'],      // uncomment this for standard TeX math delimiters
+	                 ['\\(','\\)']
+	                 ],
+
+	                 displayMath: [
+	                 ['\\[','\\]']
+	                 ],
+
+    skipTags: ["script","noscript","style","textarea","pre","code"],
+    ignoreClass: "tex2jax_ignore",
+    processClass: "tex2jax_process",
+    processEscapes: false,
+    processEnvironments: true,
+    preview: "TeX"
+    
+  },
+  
+  mml2jax: {
+    preview: "alttext"
+    
+  },
+  
+  jsMath2jax: {
+    preview: "TeX"
+    
+  },
+
+  TeX: {
+    TagSide: "right",
+    TagIndent: ".8em",
+    MultLineWidth: "85%",
+    Macros: {},
+
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    
+  },
+
+  //============================================================================
+  //
+  //  These parameters control the MathML inupt jax.
+  //
+  MathML: {
+    //
+    //  This specifies whether to use TeX spacing or MathML spacing when the
+    //  HTML-CSS output jax is used.
+    //
+    useMathMLspacing: false
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the HTML-CSS output jax.
+  //
+  "HTML-CSS": {
+    
+    scale: 100,
+    
+    availableFonts: ["STIX","TeX"],
+    
+    preferredFont: "TeX",
+    
+    webFont: "TeX",
+    
+    imageFont: "TeX",
+    
+    undefinedFamily: "STIXGeneral,'Arial Unicode MS',serif",
+      
+    showMathMenu: true,
+
+    styles: {},
+    
+    tooltip: {
+      delayPost: 600,          // milliseconds delay before tooltip is posted after mouseover
+      delayClear: 600,         // milliseconds delay before tooltip is cleared after mouseout
+      offsetX: 10, offsetY: 5  // pixels to offset tooltip from mouse position
+    }
+  },
+  
+  //============================================================================
+  //
+  //  These parameters control the NativeMML output jax.
+  //
+  NativeMML: {
+
+    scale: 100,
+
+    showMathMenu: true,
+    showMathMenuMSIE: true,
+
+    styles: {}
+  },
+  
+  MathMenu: {
+    delay: 400,
+    
+    helpURL: "http://www.mathjax.org/help/user/",
+
+    showRenderer: true,
+    showFontMenu: false,
+    showContext:  false,
+
+    windowSettings: {
+      status: "no", toolbar: "no", locationbar: "no", menubar: "no",
+      directories: "no", personalbar: "no", resizable: "yes", scrollbars: "yes",
+      width: 100, height: 50
+    },
+    
+    styles: {}
+    
+  },
+
+  MMLorHTML: {
+    prefer: {
+      MSIE:    "MML",
+      Firefox: "HTML",
+      Opera:   "HTML",
+      other:   "HTML"
+    }
+  }
+});
+</script>
+</div></div></div></div></div><div class="coursera-footer"></div></div></div></div><!--[if gte IE 9]><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><![endif]-->
+<!--[if lte IE 8]><script>document.getElementById("coursera-loading-nojs").style.display = 'block';</script><![endif]-->
+<!--[if !IE]> --><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><!-- <![endif]--><script>if (/zh/i.test(window.localStorage ? localStorage.getItem('locale') : '') || '{{ locale }}') {
+  document.getElementById('get-browser-zh').style.display = 'block';
+}</script><!--[if !IE]> --><script>document.getElementById('coursera-loading-js').style.display = 'block';</script><!-- <![endif]-->
+    <script src="./aws_setup_files/jquery.v1-7.js"></script>
+      <script src="./aws_setup_files/loadOrRefreshMathJax.js"></script>
+      <script src="./aws_setup_files/textbook_wiki.js"></script>
+  <script src="./aws_setup_files/require.v2-1-1.js"></script><script data-baseurl="https://dw0ugk4msqulk.cloudfront.net/f310c112bae429ab97a82234159003a31e360bf0/" data-version="f310c112bae429ab97a82234159003a31e360bf0" data-timestamp="1431113226575" data-debug="0" data-locale="en" id="_require">if(document.getElementById('coursera-loading-js').style.display == 'block') {
+  (function(el) {
+     require.config({
+       //enforceDefine: true,
+       waitSeconds: 75,
+       baseUrl: el.getAttribute('data-baseurl'),
+       urlArgs: el.getAttribute('data-debug') == '1' ? 'v=' + el.getAttribute('data-timestamp') : '',
+       shim: {
+          'underscore': {
+             exports: '_'
+          },
+          'backbone': {
+             deps: ['underscore', 'jquery'],
+             exports: 'Backbone',
+             init: function(_, $) {
+               Backbone.$ = $;
+               return Backbone;
+             }
+          },
+          'pages/hg/thirdparty/js/backbone.marionette': {
+            deps: ['backbone']
+          },
+          'pages/hg/thirdparty/js/webshims/polyfiller': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/webshims/extras/mousepress': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/webshims/polyfiller']
+          },
+          'pages/hg/thirdparty/js/jquery.throttle': {
+            deps: ['jquery']
+          },
+          'js/lib/jquery.linkify': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/js/bootstrap/alert': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/bootstrap/transition']
+          },
+          'spark/core/js/jquery_ui': {
+            deps: ['jquery']
+          },
+          'spark/core/js/jquery.history': {
+            deps: ['jquery']
+          },
+          'js/lib/bootstrap.tooltip': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/transition': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/tab': {
+            deps: ['jquery']
+          },
+          'bundles/videojs/lib/video.4.3.0': {
+            exports: 'vjs'
+          }
+       },
+       paths: {
+          'q': 'js/vendor/q.v1-0-1',
+          'react-with-addons': 'js/vendor/react-with-addons.v0-12',
+          'jquery':                         'pages/spark/jquery',
+          'underscore':                     'js/vendor/underscore.v1-5-2',
+          'backbone':                       'js/vendor/backbone.v1-1-0',
+          'backbone.relational':            'js/lib/backbone.relational.0.8.6',
+          'i18n':                           'js/lib/i18n._t',
+          'css':                            'js/vendor/require.css.v0-1-2',
+          'memoize':                        'js/lib/require.memoize.v0-0-1',
+          'pages/spark/models/user.json':   'empty:',
+          'pages/spark/models/course.json': 'empty:',
+          'pages/spark/models/navbar.json': 'empty:'
+       },
+       callback: function() {
+                    require(['pages/spark/routes']);
+                },
+       config: {
+         i18n: {
+           locale: (window.localStorage ? localStorage.getItem('locale') : '') || el.getAttribute('data-locale')
+         }
+       }
+     });
+  })(document.getElementById('_require'));
+}
+</script><script>define('pages/spark/models/user.json', [], function(){
+      return JSON.parse("{\"id\":6792717,\"email_address\":\"makalaaneesh@yahoo.com\",\"full_name\":\"Aneesh Makala\",\"locale\":null,\"timezone\":\"America\\\/Los_Angeles\",\"access_group_id\":\"4\",\"registration_time\":\"1423225708\",\"last_access_time\":\"1431673148\",\"last_access_ip\":\"115.118.61.29\",\"signature_track_register_time\":\"0\",\"email_announcement\":\"1\",\"email_forum\":\"1\",\"in_signature_track\":\"0\",\"wishes_proctored_exam\":\"0\",\"first_name\":\"Aneesh\",\"permissions\":[\"default\",\"allow_site_access\"],\"group\":\"Student\",\"anonymous\":false,\"forum_title\":\"Student\",\"signature_track_state\":1,\"verified_quizzes\":[],\"submitted_quizzes\":[\"27\",\"29\",\"31\",\"37\",\"39\",\"41\",\"43\",\"45\",\"47\",\"89\",\"91\",\"93\",\"95\",\"97\",\"123\",\"125\",\"127\",\"159\"],\"scheduled_proctored_exam\":null,\"last_chance_modal\":null,\"flexjoin_last_chance_modal\":null}");
+  });
+define('pages/spark/models/course.json', [], function(){
+      return JSON.parse("{\"id\":972772,\"isPrivate\":false,\"type\":\"public\",\"name\":\"Introduction to Data Science\",\"instructor\":\"Bill Howe\",\"sessionName\":\"datasci-002\",\"externalBaseURL\":\"https:\\\/\\\/www.coursera.org\\\/\",\"shortname\":\"datasci\",\"host\":\"https:\\\/\\\/www.coursera.org\\\/\",\"assetUnversionedLink\":\"https:\\\/\\\/dw0ugk4msqulk.cloudfront.net\\\/\",\"cheggID\":\"\",\"hasLTI\":true,\"badgevilleDomain\":\"\",\"linkable\":false,\"universityShortname\":\"uw\",\"signatureTrackStatus\":{\"signature_track_enabled\":0},\"courseURLs\":{\"log_in_link\":\"https:\\\/\\\/www.coursera.org\\\/login?post_redirect=https%3A%2F%2Fwww.coursera.org%2Flogin%3Fuser_action%3Dclass%26course_id%3D972772%26post_redirect%3Dhttps%253A%252F%252Fclass.coursera.org%252Fdatasci-002%252Fauth%252Fauth_redirector%253Ftype%253Dlogin%2526subtype%253Dnormal%2526visiting%253D\",\"sign_up_link\":\"https:\\\/\\\/www.coursera.org\\\/signup?enroll_cid=972772&enroll_sn=datasci&enroll_n=Introduction to Data Science\",\"view_course_info_link\":\"https:\\\/\\\/www.coursera.org\\\/course\\\/datasci\",\"sign_up_link_cant_enroll\":\"https:\\\/\\\/www.coursera.org\\\/signup?post_redirect=https%3A%2F%2Fwww.coursera.org%2Fcourse%2Fdatasci\"},\"courseBase\":\"https:\\\/\\\/class.coursera.org\\\/datasci-002\\\/\",\"search\":true,\"hideWiki\":true,\"aceStartRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceEndRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamStartDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamEndDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamRules\":\"\",\"aceExamDuration\":\"\",\"aceBeforeExam\":false,\"aceAfterExam\":true,\"aceHours\":null,\"aceCreditType\":\"\",\"acePrice\":null,\"aceExamID\":null,\"aceEligible\":false,\"canRegisterForACE\":false,\"specialization\":null,\"supportForums\":true,\"textbooks\":\"\",\"inVideoQuizV2\":false,\"in_flexjoin\":0,\"honorCodeExtraText\":null,\"honorCodeCustomTitle\":\"\",\"honorCodeCustomButton\":\"\",\"studentAccessDisabled\":0,\"disableQQs\":false}");
+  });
+  define('pages/spark/models/navbar.json', [], function(){
+      return JSON.parse("{\"items\":[{\"name\":\"Home\",\"icon\":\"home\",\"link_type\":\"circuit\",\"link_data\":\"class:index\"},{\"name\":\"Video Lectures\",\"icon\":\"lecture\",\"link_type\":\"circuit\",\"link_data\":\"lecture:index\"},{\"name\":\"Discussion Forums\",\"icon\":\"forum\",\"link_type\":\"circuit\",\"link_data\":\"forum:index\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Programming Assignments\",\"icon\":\"assignment\",\"link_type\":\"circuit\",\"link_data\":\"assignment:index\"},{\"name\":\"Quizzes\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index\"},{\"name\":\"Peer Assessments\",\"icon\":\"assignment\",\"link_type\":\"circuit\",\"link_data\":\"human_grading:index\"},{\"name\":\"Optional Real-World Project\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"OptionalRealWorldProject\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Syllabus\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"syllabus\"},{\"name\":\"Course Logistics\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"courselogistics\"},{\"name\":\"Class Virtual Machine\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"ClassVirtualMachine\"},{\"name\":\"Github Instructions\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"GithubInstructions\"},{\"name\":\"Python Resources\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"PythonResources\"},{\"name\":\"AWS Setup\",\"icon\":\"\",\"link_type\":\"wiki\",\"link_data\":\"awssetup\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Surveys\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index?quiz_type=survey\"},{\"name\":\"About Us\",\"icon\":\"wiki\",\"link_type\":\"wiki\",\"link_data\":\"aboutus\"}]}");
+  });
+</script><script>var coursera_enable_new_help_center = false;
+</script><div class="hide confirm-navigation modal"><div class="modal-header"><h3>Confirm Navigation</h3></div><div class="modal-body"><div class="confirm-navigation-message"></div><div>Are you sure you want to leave this page?</div></div><div class="modal-footer"><button data-modal-close="data-modal-close" class="btn confirm-navigation-stay">Stay on this Page</button><button data-modal-close="data-modal-close" class="btn btn-danger confirm-navigation-leave">Leave this Page</button></div></div><div class="coursera-async-message" style="display: none;"></div></body></html>
